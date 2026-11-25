@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paul Marvin · Desktop background</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+.lite .card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.lite .orb{filter:none!important;animation:none!important}
+.lite .a{filter:none!important}
+.lite .glow{animation:none!important}
+@property --base{syntax:"<color>";inherits:true;initial-value:#04101e}
+@property --g1{syntax:"<color>";inherits:true;initial-value:rgba(25,110,200,.55)}
+@property --g2{syntax:"<color>";inherits:true;initial-value:rgba(39,182,245,.42)}
+@property --g3{syntax:"<color>";inherits:true;initial-value:rgba(47,143,208,.65)}
+@property --acc{syntax:"<color>";inherits:true;initial-value:#8fdcff}
+@property --acc2{syntax:"<color>";inherits:true;initial-value:#2f8fd0}
+@property --acc3{syntax:"<color>";inherits:true;initial-value:#0f4c82}
+@property --orb{syntax:"<color>";inherits:true;initial-value:#4fb6ee}
+@property --orbdark{syntax:"<color>";inherits:true;initial-value:#04122a}
+@property --deep{syntax:"<color>";inherits:true;initial-value:rgba(5,16,34,.8)}
+@property --ringbg{syntax:"<color>";inherits:true;initial-value:rgba(30,100,170,.35)}
+@property --ringin{syntax:"<color>";inherits:true;initial-value:#06223f}
+@property --sh{syntax:"<color>";inherits:true;initial-value:rgba(39,182,245,.4)}
+@property --line{syntax:"<color>";inherits:true;initial-value:rgba(120,200,255,.28)}
+:root{--ink:#f4f2fb;--mut:#a3b0c2;--glass:rgba(255,255,255,.06);--sans:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;--serif:"Instrument Serif",Georgia,serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace;--e:cubic-bezier(.2,.8,.2,1);--base:#04101e;--g1:rgba(25,110,200,.55);--g2:rgba(39,182,245,.42);--g3:rgba(47,143,208,.65);--acc:#8fdcff;--acc2:#2f8fd0;--acc3:#0f4c82;--orb:#4fb6ee;--orbdark:#04122a;--deep:rgba(5,16,34,.8);--ringbg:rgba(30,100,170,.35);--ringin:#06223f;--sh:rgba(39,182,245,.4);--line:rgba(120,200,255,.28);transition:--base 1s ease,--g1 1s ease,--g2 1s ease,--g3 1s ease,--acc 1s ease,--acc2 1s ease,--acc3 1s ease,--orb 1s ease,--orbdark 1s ease,--deep 1s ease,--ringbg 1s ease,--ringin 1s ease,--sh 1s ease,--line 1s ease}
+:root[data-wall="graphite"]{--base:#07090c;--g1:rgba(90,102,118,.5);--g2:rgba(170,180,195,.28);--g3:rgba(140,155,175,.45);--acc:#d3dae3;--acc2:#7d8996;--acc3:#46515e;--orb:#b4bdc9;--orbdark:#080a0d;--deep:rgba(10,12,16,.8);--ringbg:rgba(100,112,128,.35);--ringin:#151a21;--sh:rgba(170,180,195,.3);--line:rgba(190,200,215,.25)}
+:root[data-wall="dusk"]{--base:#070a1a;--g1:rgba(27,74,128,.6);--g2:rgba(255,122,47,.42);--g3:rgba(255,100,60,.55);--acc:#ffb27a;--acc2:#ff7a2f;--acc3:#1b4a80;--orb:#ff8a4c;--orbdark:#0b1330;--deep:rgba(8,12,30,.8);--ringbg:rgba(90,50,60,.4);--ringin:#1a1020;--sh:rgba(255,122,47,.4);--line:rgba(255,170,110,.28)}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@keyframes drift{to{transform:translate(-4%,-3%) scale(1.08)}}
+html,body{height:100%;margin:0;overflow:hidden}
+body{background:radial-gradient(60% 70% at 15% 20%,var(--g1),transparent),radial-gradient(60% 70% at 90% 90%,var(--g2),transparent),var(--base);color:var(--ink);font-family:var(--sans);display:grid;place-items:center;padding:26px 0 96px}
+.stage{container-type:inline-size;position:relative;aspect-ratio:16/10;width:min(94vw,calc((100vh - 140px)*1.6))}
+.glow{position:fixed;inset:-20%;background:radial-gradient(40% 50% at 50% 115%,var(--g3),transparent 70%),radial-gradient(30% 40% at 100% 0,var(--g2),transparent 70%);animation:drift 12s ease-in-out infinite alternate}
+.scene{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .6s;padding:9cqw 6cqw 4cqw}
+.scene.on{opacity:1}
+.a{opacity:0;transform:translateY(2.4cqw);filter:blur(8px)}
+.scene.on .a{animation:in .9s var(--e) forwards;animation-delay:calc(var(--d,0)*1s)}
+@keyframes in{to{opacity:1;transform:none;filter:none}}
+.eyebrow{font-family:var(--mono);font-size:1cqw;letter-spacing:.18em;color:var(--acc);text-transform:uppercase}
+h1,h2{font-weight:500;letter-spacing:-.04em;line-height:.98}
+h1{font-size:8.6cqw}h2{font-size:6.4cqw}
+em{font-family:var(--serif);font-style:italic;font-weight:400;color:#6f6a86;letter-spacing:-.02em}
+.sub{font-size:1.5cqw;color:var(--mut);margin-top:1.6cqw;max-width:40cqw;line-height:1.5}
+.ring{display:inline-grid;place-items:center;width:6.4cqw;height:5.4cqw;border-radius:2cqw;border:1.5px solid var(--acc);background:var(--ringbg);vertical-align:middle;margin:0 .6cqw;box-shadow:0 0 30px var(--sh)}
+.ring b{width:2.6cqw;height:2.6cqw;border:2px solid #fff;border-radius:50%;box-shadow:inset 0 0 0 .5cqw var(--ringin),inset 0 0 0 .7cqw #fff;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pills{display:flex;flex-wrap:wrap;gap:.8cqw;margin-top:2.2cqw;max-width:42cqw}
+.pill{font-size:1.1cqw;padding:.6cqw 1.3cqw;border-radius:99px;background:var(--glass);border:1px solid rgba(255,255,255,.1);color:#d8d4ee}
+.pill::before{content:"";display:inline-block;width:.5cqw;height:.5cqw;border-radius:50%;background:var(--acc);margin-right:.6cqw;vertical-align:middle}
+.card{background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.12);border-radius:1.6cqw;backdrop-filter:blur(14px);padding:1.6cqw}
+.card small{display:block;font-family:var(--mono);font-size:.85cqw;letter-spacing:.14em;color:var(--acc);margin-bottom:.7cqw}
+.card strong{display:block;font-weight:500;font-size:1.6cqw;letter-spacing:-.02em}
+.card p{font-size:1.05cqw;color:var(--mut);margin-top:.4cqw}
+.fl{animation:bob 5s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(-.9cqw)}}
+.code{position:absolute;right:6cqw;top:21cqw;width:31cqw;font-family:var(--mono);font-size:1.15cqw;line-height:1.9;color:#cfc8ee;background:var(--deep);border:1px solid var(--line);border-radius:1.4cqw;padding:1.4cqw 1.8cqw}
+.code .dots{display:flex;gap:.5cqw;margin-bottom:1cqw}.code .dots s{width:.8cqw;height:.8cqw;border-radius:50%;background:var(--acc2);text-decoration:none}.code .dots s:nth-child(2){background:var(--acc)}.code .dots s:nth-child(3){background:var(--acc3)}
+.code u{text-decoration:none;color:var(--acc)}.code .n{color:#5b5775;margin-right:1.2cqw}
+.orb{position:absolute;right:-6cqw;top:-8cqw;width:44cqw;height:44cqw;border-radius:50%;background:repeating-radial-gradient(circle at 40% 40%,var(--orb) 0 .5cqw,var(--orbdark) .5cqw 1.5cqw);filter:blur(.4px) drop-shadow(0 0 60px var(--sh));opacity:.55;mask:radial-gradient(circle,#000 35%,transparent 70%);-webkit-mask:radial-gradient(circle,#000 35%,transparent 70%);animation:spin 40s linear infinite}
+.two{display:grid;grid-template-columns:1.1fr 1fr;gap:4cqw;align-items:center;height:100%}
+.flow{display:grid;gap:1.2cqw;justify-items:stretch}
+.flow .card{padding:1.3cqw 1.6cqw}.arrow{justify-self:center;width:1.5px;height:1.4cqw;background:linear-gradient(var(--acc),transparent)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqw;margin-top:3.2cqw}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4cqw;margin-top:3cqw;max-width:62cqw}
+.grid3 .card{padding:2cqw}.grid3 strong{font-size:2cqw}
+.chk{display:flex;gap:1.2cqw;align-items:flex-start}.chk i{flex:none;width:2.2cqw;height:2.2cqw;border-radius:50%;border:1.5px solid var(--acc);position:relative}
+.chk i::after{content:"";position:absolute;left:.75cqw;top:.35cqw;width:.5cqw;height:1cqw;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.foot{position:absolute;left:6cqw;right:6cqw;bottom:2.4cqw;display:flex;justify-content:space-between;font-family:var(--mono);font-size:.9cqw;letter-spacing:.14em;color:#6f6a86}
+.center{display:grid;place-items:center;text-align:center;height:100%}
+.mark{font-size:15cqw;font-weight:500;letter-spacing:-.06em;line-height:.9;background:linear-gradient(180deg,#fff 30%,var(--acc) 80%,var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (prefers-reduced-motion:reduce){.fl,.glow,.orb,.ring b{animation:none}}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="stage" id="stage">
+
+  <!-- 1 HERO -->
+  <section class="scene">
+    <div class="orb"></div>
+    <div class="eyebrow a" style="--d:.1">Paul Marvin / Personal Portfolio</div>
+    <h1 class="a" style="--d:.3;margin-top:1.6cqw">Software<br>Dev<span class="ring"><b></b></span><em>eloper</em></h1>
+    <p class="sub a" style="--d:.7">I build backend applications, APIs and cloud-connected systems.</p>
+    <div class="pills a" style="--d:1">
+      <span class="pill">Python</span><span class="pill">C# / .NET</span><span class="pill">FastAPI</span><span class="pill">ASP.NET Core</span><span class="pill">Azure</span><span class="pill">MS SQL Server</span><span class="pill">Cybersecurity</span>
+    </div>
+    <div class="code a fl" style="--d:1.3">
+      <div class="dots"><s></s><s></s><s></s></div>
+      <div><span class="n">01</span>languages = <u>Python, C#</u></div>
+      <div><span class="n">02</span>backend = <u>FastAPI, .NET</u></div>
+      <div><span class="n">03</span>cloud = <u>Microsoft Azure</u></div>
+      <div><span class="n">04</span>data = <u>MS SQL Server</u></div>
+      <div><span class="n">05</span>focus = <u>Cybersecurity</u></div>
+    </div>
+    <div class="foot"><span>BACKEND DEVELOPMENT → CLOUD COMPUTING → CYBERSECURITY</span></div>
+  </section>
+
+  <!-- 2 BACKEND -->
+  <section class="scene">
+    <div class="two">
+      <div>
+        <div class="eyebrow a" style="--d:.1">01 / Backend development</div>
+        <h2 class="a" style="--d:.3;margin-top:1.4cqw">Python +<br><em>C#</em></h2>
+        <p class="sub a" style="--d:.6">Building APIs and maintaining backend applications.</p>
+        <div class="code a fl" style="--d:.9;position:relative;right:auto;top:auto;width:34cqw;margin-top:2.4cqw">
+          <div class="dots"><s></s><s></s><s></s></div>
+          <div><span class="n">01</span><u>@app.get</u>('/health')</div>
+          <div><span class="n">02</span><u>def</u> health_check():</div>
+          <div><span class="n">03</span>&nbsp;&nbsp;&nbsp;&nbsp;return {'status': 'healthy'}</div>
+          <div><span class="n">04</span><span style="color:#5b5775"># clear, testable API logic</span></div>
+        </div>
+      </div>
+      <div class="flow">
+        <div class="card a" style="--d:.8"><small>CLIENT</small><strong>Web interface</strong></div><div class="arrow"></div>
+        <div class="card a" style="--d:1.1"><small>API</small><strong>FastAPI / ASP.NET Core</strong></div><div class="arrow"></div>
+        <div class="card a" style="--d:1.4"><small>DATA</small><strong>PostgreSQL / SQL Server</strong></div>
+      </div>
+    </div>
+    <div class="foot"><span>VALIDATION • RELIABILITY • API DESIGN</span></div>
+  </section>
+
+  <!-- 3 CLOUD -->
+  <section class="scene">
+    <div class="eyebrow a" style="--d:.1">02 / Cloud &amp; databases</div>
+    <h2 class="a" style="--d:.3;margin-top:1.4cqw">Microsoft <em>Azure</em></h2>
+    <p class="sub a" style="--d:.6">Cloud services, application hosting and relational data.</p>
+    <div class="grid3">
+      <div class="card a fl" style="--d:.9"><small>CLOUD PLATFORM</small><strong>Microsoft Azure</strong><p>Cloud computing</p></div>
+      <div class="card a fl" style="--d:1.15;animation-delay:-1s"><small>DATABASE</small><strong>MS SQL Server</strong><p>Relational databases</p></div>
+      <div class="card a fl" style="--d:1.4;animation-delay:-2s"><small>BACKEND STACK</small><strong>Python + C#</strong><p>Application development</p></div>
+    </div>
+    <div class="foot"><span>INTERESTS: API DEVELOPMENT • CLOUD COMPUTING • DATABASE DESIGN</span></div>
+  </section>
+
+  <!-- 4 SECURITY -->
+  <section class="scene">
+    <div class="eyebrow a" style="--d:.1">03 / Cybersecurity</div>
+    <h2 class="a" style="--d:.3;margin-top:1.4cqw;font-size:5.6cqw">Security-minded <em>development</em></h2>
+    <p class="sub a" style="--d:.6">A defensive mindset for protecting applications, identities and data.</p>
+    <div class="grid2">
+      <div class="card chk a" style="--d:.9"><i></i><div><small>APPLICATION SECURITY</small><strong>Safer APIs and application practices</strong></div></div>
+      <div class="card chk a" style="--d:1.1"><i></i><div><small>IDENTITY &amp; ACCESS</small><strong>Authentication and access awareness</strong></div></div>
+      <div class="card chk a" style="--d:1.3"><i></i><div><small>DATA PROTECTION</small><strong>Careful handling of sensitive information</strong></div></div>
+      <div class="card chk a" style="--d:1.5"><i></i><div><small>DEFENSIVE SECURITY</small><strong>Monitoring and security fundamentals</strong></div></div>
+    </div>
+  </section>
+
+  <!-- 5 OUTRO -->
+  <section class="scene" style="padding-top:4cqw">
+    <div class="center">
+      <div>
+        <div class="eyebrow a" style="--d:.1">Software developer · Cloud · Security</div>
+        <div class="mark a" style="--d:.4;margin-top:1.8cqw">PAUL MARVIN</div>
+        <p class="sub a" style="--d:.9;margin:2cqw auto 0">Python&nbsp;&nbsp;/&nbsp;&nbsp;C#&nbsp;&nbsp;/&nbsp;&nbsp;Azure&nbsp;&nbsp;/&nbsp;&nbsp;MS SQL Server</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script>
+(function(){
+  if(/[?&]lite=1/.test(location.search))document.documentElement.classList.add('lite');
+  var scenes=[].slice.call(document.querySelectorAll('.scene')),dur=[5000,5000,4800,5000,4600],timers=[];
+  function show(i){scenes.forEach(function(s,k){s.classList.toggle('on',k===i)})}
+  function play(){
+    timers.forEach(clearTimeout);timers=[];
+    var t=0,total=dur.reduce(function(a,b){return a+b},0);
+    scenes.forEach(function(s){s.classList.remove('on')});
+    dur.forEach(function(d,i){timers.push(setTimeout(function(){show(i)},t+(i?0:60)));t+=d});
+    timers.push(setTimeout(play,total+1500));
+  }
+  /* the desktop (System Preferences) tells this page which wallpaper is chosen */
+  window.addEventListener('message',function(e){
+    var w=e.data&&e.data.wall;
+    if(w==='water'||w==='graphite'||w==='dusk')document.documentElement.setAttribute('data-wall',w);
+  });
+  document.addEventListener('visibilitychange',function(){if(document.hidden){timers.forEach(clearTimeout);timers=[]}else play()});
+  play();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+search-api/.python_packages/
+search-api/local.settings.json
+.env
+__pycache__/
+.vscode/
